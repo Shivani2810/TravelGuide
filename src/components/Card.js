@@ -32,7 +32,7 @@
 
                     <div className="tour-details">
                         <h3 className="tour-name">{displayname}</h3>
-                        <h3 className="tour-price">{displayprice}</h3>
+                        <h3 className="tour-price">₹{displayprice}</h3>
                     </div>
 
                     <div className="tour-description">
