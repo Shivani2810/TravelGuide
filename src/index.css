@@ -1,1 +1,232 @@
-/* write your css here */
+/* index.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent accidental horizontal scroll */
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f6f8fb;
+  color: #0b1b2b;
+}
+
+/* -------- App Heading -------- */
+
+.heading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin: 16px 0 28px;
+  color: #092a4b;
+  letter-spacing: 2px;
+  border: 3px dashed #e24b4b;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #ffffff;
+}
+
+/* -------- Layout Wrappers -------- */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 18px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  margin: 10px 0 18px;
+}
+
+.heading h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1b5fa2;
+  letter-spacing: 0.5px;
+}
+
+/* Cards wrapper */
+.cards {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 8px 0 24px;
+}
+
+/* -------- Card -------- */
+
+.card {
+  width: 300px;
+  height: max-content;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  /* Your old box-shadow was invalid; this is a real one */
+  box-shadow: 0 10px 26px rgba(14, 30, 37, 0.10);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(14, 30, 37, 0.14);
+}
+
+/* Image */
+.tour-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Info section inside card */
+.tour-info {
+  width: 100%;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Name + Price row */
+.tour-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.tour-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b1b2b;
+}
+
+.tour-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1b8f4e;
+}
+
+/* Description */
+.tour-description p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(11, 27, 43, 0.85);
+}
+
+.tour-readmore {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b63c9;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tour-readmore:hover {
+  text-decoration: underline;
+}
+
+/* Not Interested button */
+.tour-interest {
+  width: 100%;
+  margin-top: 14px;
+  
+}
+.tour-interest:hover{
+transform: scale(1.05);
+/* background-color: #1b5fa2; */
+}
+
+.button-interest {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  background: #ff4d4d;
+  color: #ffffff;
+  transition: transform 0.08s ease, opacity 0.15s ease;
+}
+
+.button-interest:hover {
+  opacity: 0.92;
+}
+
+.button-interest:active {
+  transform: scale(0.98);
+}
+
+/* -------- Empty State (No Tours Left) -------- */
+
+.refresh {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.refresh > div {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0a2a4a;
+}
+
+.refresh-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  background: #0b63c9;
+  color: #ffffff;
+}
+
+.refresh-btn:hover {
+  opacity: 0.92;
+}
+
+/* -------- Responsive -------- */
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .card {
+    width: 92%;
+  }
+}
