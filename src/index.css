@@ -84,8 +84,6 @@ body {
   border-radius: 12px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.06);
-
-  /* Your old box-shadow was invalid; this is a real one */
   box-shadow: 0 10px 26px rgba(14, 30, 37, 0.10);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -145,7 +143,7 @@ body {
   margin-top: 6px;
   font-size: 14px;
   font-weight: 700;
-  color: #0b63c9;
+  color: #acb531;
   cursor: pointer;
   user-select: none;
 }
